@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>拜託和好啦🥺</title>
+  <style>
+    body {
+      font-family: "微軟正黑體", sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #fffbe7;
+    }
+    img {
+      width: 250px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+    #message {
+      font-size: 20px;
+      margin: 20px 0;
+      color: #e57373;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #yesBtn {
+      background-color: #ffb6c1;
+    }
+    #noBtn {
+      background-color: #d3d3d3;
+    }
+  </style>
+</head>
+<body>
+  <h2>明珺～可以不要再生氣了嗎？🥺🙏</h2>
+  <img src="https://imgur.com/31szVPq.gif" alt="050501.gif">
+  <p id="message">我們和好好嗎？💗</p>
+  <div>
+    <button id="yesBtn">和好 💖</button>
+    <button id="noBtn">不要啦 🙅‍♀️</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const message = document.getElementById("message");
+
+    let yesSize = 18;
+    let noSize = 18;
+
+    yesBtn.onclick = function () {
+      message.textContent = "耶～謝謝明珺主人願意原諒我 🥰";
+    };
+
+    noBtn.onclick = function () {
+      yesSize += 4;
+      noSize -= 2;
+      if (noSize < 10) noSize = 10;
+      yesBtn.style.fontSize = yesSize + "px";
+      noBtn.style.fontSize = noSize + "px";
+      message.textContent = "真的不要嗎🥺 我會一直等妳的...";
+    };
+  </script>
+</body>
+</html>
